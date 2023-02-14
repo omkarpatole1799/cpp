@@ -23,11 +23,19 @@ void doSomething(string s)
     s[0] = 't';
     cout << s << endl;
 }
-void doSomething1(int &x){  // &sign used because to pass the value by reference
+void doSomething1(int &x)
+{ // &sign used because to pass the value by reference
     x += 10;
     cout << x << endl;
 }
 
+// this is return function
+int myFun()
+{
+    int x = 10;
+    int y = 20;
+    return x + y;
+}
 int main()
 {
     // printName();  // this is non parameterised function
