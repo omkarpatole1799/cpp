@@ -163,12 +163,12 @@ void pattern8(int n)
 
 int main()
 {
-    cout << "enter how much test cases: ";
+    // cout << "enter how much test cases: ";
     int t;
     cin >> t;
     for (int i = 0; i < t; i++)
     {
-        cout << "enter num: ";
+        // cout << "enter num: ";
         int n;
         cin >> n;
         // pattern1(n);
