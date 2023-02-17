@@ -148,14 +148,59 @@ void pattern8(int n)
         for (int j = 0; j < i; j++)
         {
             cout << "&";
+            cout << " ";
         }
-        for (int j = 0; j < 2*n - (2 * i + i); j++)
+        for (int j = 0; j < 2 * n - (2 * i + i); j++)
         {
             cout << "*";
+            cout << " ";
         }
         for (int j = 0; j < i; j++)
         {
             cout << "&";
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+
+// pattern9
+//  1234
+//  1234
+//  1234
+void pattern9(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            cout << j;
+        }
+        cout << endl;
+    }
+}
+
+// pattern10
+void pattern10(int n){
+    for(int i = 1; i <=n ; i++)    {
+        for(int j = 1; j <= n; j++){
+            cout << n-j+1;
+        }
+        cout << endl;
+    }
+}
+
+// pattern11
+void pattern11(int n){
+    for (int i = 0; i < n; i++){
+        for (int j= 0; j<n;j++){
+            cout << j;
+        }
+        for (int j=0; j< 2*n-(2*i+1); j++){
+            cout << " ";
+        }
+        for (int j = 0; j < n; j++){
+            cout << j;
         }
         cout << endl;
     }
@@ -178,7 +223,12 @@ int main()
         // pattern5(n);
         // pattern6(n);
         // pattern7(n);
-        pattern8(n);
+        // pattern8(n);
+        // pattern9(n);
+        // pattern10(n);
+        pattern11(n);
+
+
     }
     return 0;
 }
