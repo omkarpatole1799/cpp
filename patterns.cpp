@@ -59,15 +59,107 @@ void pattern3(int n)
 // 333
 // 4444
 // 55555
-void pattern4(int n){
-    for (int i = 1; i <= n; i++){
-        for (int j = 1; j <= i; j ++){
+void pattern4(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
             cout << i;
         }
         cout << endl;
     }
 }
 
+// pattern5
+// ****
+// ***
+// **
+// *
+void pattern5(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n - i + 1; j++)
+        {
+            cout << "# ";
+        }
+        cout << endl;
+    }
+}
+
+// pattern5
+// 12345
+// 1234
+// 123
+// 12
+// 1
+void pattern6(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n - i + 1; j++)
+        {
+            cout << j;
+            // cout << n-i+1;
+        }
+        cout << endl;
+    }
+}
+
+// pattern7
+//   *
+//  ***
+// *****
+void pattern7(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        // space
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            cout << " ";
+        }
+        // star
+        for (int j = 0; j < 2 * i + 1; j++)
+        {
+            cout << "*";
+        }
+        // space
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+
+// pattern8
+// *********
+//  *******
+//   *****
+//    ***
+//     *
+void pattern8(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        // space
+        for (int j = 0; j < i; j++)
+        {
+            cout << "&";
+        }
+        for (int j = 0; j < 2*n - (2 * i + i); j++)
+        {
+            cout << "*";
+        }
+        for (int j = 0; j < i; j++)
+        {
+            cout << "&";
+        }
+        cout << endl;
+    }
+}
 
 int main()
 {
@@ -82,8 +174,11 @@ int main()
         // pattern1(n);
         // pattern2(n);
         // pattern3(n);
-        pattern4(n);
-
+        // pattern4(n);
+        // pattern5(n);
+        // pattern6(n);
+        // pattern7(n);
+        pattern8(n);
     }
     return 0;
 }
