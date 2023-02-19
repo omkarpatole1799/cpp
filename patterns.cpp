@@ -147,17 +147,16 @@ void pattern8(int n)
         // space
         for (int j = 0; j < i; j++)
         {
-            cout << "&";
+            // cout << "&";
             cout << " ";
         }
-        for (int j = 0; j < 2 * n - (2 * i + i); j++)
+        for (int j = 0; j < 2 * n - (2 * i + 1); j++)
         {
             cout << "*";
-            cout << " ";
         }
         for (int j = 0; j < i; j++)
         {
-            cout << "&";
+            // cout << "&";
             cout << " ";
         }
         cout << endl;
@@ -181,26 +180,125 @@ void pattern9(int n)
 }
 
 // pattern10
-void pattern10(int n){
-    for(int i = 1; i <=n ; i++)    {
-        for(int j = 1; j <= n; j++){
-            cout << n-j+1;
+// 54321
+// 54321
+// 54321
+// 54321
+// 54321
+void pattern10(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            cout << n - j + 1;
         }
         cout << endl;
     }
 }
 
 // pattern11
-void pattern11(int n){
-    for (int i = 0; i < n; i++){
-        for (int j= 0; j<n;j++){
+void pattern11(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
             cout << j;
         }
-        for (int j=0; j< 2*n-(2*i+1); j++){
+        for (int j = 0; j < 2 * n - (2 * i + 1); j++)
+        {
             cout << " ";
         }
-        for (int j = 0; j < n; j++){
+        for (int j = 0; j < n; j++)
+        {
             cout << j;
+        }
+        cout << endl;
+    }
+}
+
+// pattern12
+//     *
+//    ***
+//   *****
+//  *******
+// *********
+//  *******
+//   *****
+//    ***
+//     *
+void pattern12(int n)
+{
+    // pattern7(n);
+    // pattern8(n);
+    for (int i = 1; i <= n; i++)
+    {
+        // for First spaces
+        int spaces1 = n - i;
+        for (int j = 1; j <= spaces1; j++)
+        {
+            cout << " ";
+        }
+        // stars first triangle
+        for (int k = 1; k <= i; k++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+
+    for (int a = 1; a <= n; a++)
+    {
+        // 2nd triangle spaces
+        for (int l = 1; l < a; l++)
+        {
+            cout << " ";
+        }
+        // 2nd triangle stars
+        for (int m = 1; m <= n - a + 1; m++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
+
+// pattern 13 (diamond)
+//     *
+//    * *
+//   * * *
+//  * * * *
+// * * * * *
+// * * * * *
+//  * * * *
+//   * * *
+//    * *
+//     *
+void pattern13(int n)
+{
+    // upper triangle
+    for (int i = 1; i <= n; i++){
+        // space
+        int space1 = n-i;
+        for(int j = 1; j <=space1; j++){
+            cout << " ";
+        }
+        //star
+        for (int j = 1; j <=i; j++){
+            cout << "* ";
+        }
+        cout << endl;
+    }
+    // lower triangle
+    for(int i = 1; i <=n; i ++){
+        // space
+        for (int j=1;j<i;j++){
+            cout << " ";
+        }
+        // star
+        for(int j=1; j <=n-i+1; j++){
+            cout << "* ";
         }
         cout << endl;
     }
@@ -226,9 +324,9 @@ int main()
         // pattern8(n);
         // pattern9(n);
         // pattern10(n);
-        pattern11(n);
-
-
+        // pattern11(n);
+        // pattern12(n);
+        pattern13(n);
     }
     return 0;
 }
