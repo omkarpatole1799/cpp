@@ -278,27 +278,78 @@ void pattern12(int n)
 void pattern13(int n)
 {
     // upper triangle
-    for (int i = 1; i <= n; i++){
+    for (int i = 1; i <= n; i++)
+    {
         // space
-        int space1 = n-i;
-        for(int j = 1; j <=space1; j++){
+        int space1 = n - i;
+        for (int j = 1; j <= space1; j++)
+        {
             cout << " ";
         }
-        //star
-        for (int j = 1; j <=i; j++){
+        // star
+        for (int j = 1; j <= i; j++)
+        {
             cout << "* ";
         }
         cout << endl;
     }
     // lower triangle
-    for(int i = 1; i <=n; i ++){
+    for (int i = 1; i <= n; i++)
+    {
         // space
-        for (int j=1;j<i;j++){
+        for (int j = 1; j < i; j++)
+        {
             cout << " ";
         }
         // star
-        for(int j=1; j <=n-i+1; j++){
+        for (int j = 1; j <= n - i + 1; j++)
+        {
             cout << "* ";
+        }
+        cout << endl;
+    }
+}
+
+// pattern14
+// *
+// **
+// ***
+// ****
+// *****
+// ****
+// ***
+// **
+// *
+void pattern14(int n)
+{
+    // upper triangle
+    for(int row = 1; row <=n; row++){
+        for(int col = 1; col <=row; col++){
+            cout << "* ";
+        }
+        cout << endl;
+    }
+    // lower triangle
+    for(int row = 1; row < n; row ++){
+        for(int col = 1; col <= n-row; col ++){
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
+
+// pattern 15
+// 1
+// 2 3
+// 4 5 6
+// 7 8 9 10
+// 11 12 13 14 15
+void pattern15(int n){
+    int count = 1;
+    for (int row = 1; row <=n; row++){
+        for(int col = 1; col <=row; col++){
+            cout << count << " ";
+            count++;
         }
         cout << endl;
     }
@@ -326,7 +377,9 @@ int main()
         // pattern10(n);
         // pattern11(n);
         // pattern12(n);
-        pattern13(n);
+        // pattern13(n);
+        // pattern14(n);
+        pattern15(n);
     }
     return 0;
 }
